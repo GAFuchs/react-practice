@@ -20,7 +20,7 @@ And of course `react-practice` itself is open source with a [public repository][
 
 ### Run
 
-After installing [Node.js](https://nodejs.org/) follow thw comands.
+After installing [Node.js](https://nodejs.org/) follow the comands.
 
 Clone the git repo.
 
