@@ -7,7 +7,7 @@ The base code was developed following this tutorial:
 
 ### Tech
 
-Those are the open source projects useds to work properly:
+Those are the open source projects used to work properly:
 
 * [Atom Editor] - a hackable text editor for the 21st Century
 * [Bootstrap 3] - great UI boilerplate for modern web apps
