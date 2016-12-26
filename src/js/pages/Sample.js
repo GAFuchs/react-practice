@@ -21,58 +21,73 @@ export default class Sample extends React.Component {
     const sampleClass = location.pathname.match(/^\/sample/) ? "active" : "";
     const todosClass = location.pathname.match(/^\/todos/) ? "active" : "";
 
-    const navStyle = {
-      marginTop: "-10px",
+    const miniSubMenuMarginStyle = {
+      margin: "10px",
     };
+
+    const miniSubMenuStyle = {
+      display: "none",
+      backgroundColor: "rg",
+      border: "1px solid rgba(0, 0, 0, 0.9)",
+      borderRadius: "4px",
+      padding: "9px;  ba(0, 0, 0, 0)",
+      /*position: relative;*/
+      width: "42px",
+    };
+
+    const iconBarStyle = {
+      borderRadius: "1px",
+      display: "block",
+      height: "2px",
+      width: "22px",
+      marginTop: "3px",
+    };
+
+    const slideSubMenuStyle = {
+      background: "rgba(0, 0, 0, 0.45)",
+      display: "inline-block",
+      padding: "0 8px",
+      borderRadius: "4px",
+      cursor: "pointer",
+    }
 
     return (
       <div>
-        <nav class="navbar navbar-default navbar-fixed-side col-md-2" style={navStyle}>
-          <div class="container">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle" onClick={this.toggleCollapse.bind(this)} >
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
+        <div class="row" style={miniSubMenuMarginStyle}>
+          <div class="col-sm-4 col-md-3 sidebar">
+            <div style={miniSubMenuStyle}>
+              <span style={iconBarStyle}></span>
+              <span style={iconBarStyle}></span>
+              <span style={iconBarStyle}></span>
+            </div>
+            <div class="list-group">
+              <span href="#" class="list-group-item active">
+                Submenu
+                <span class="pull-right" style={slideSubMenuStyle}>
+                  <i class="fa fa-times"></i>
+                </span>
+              </span>
+              <a href="#" class="list-group-item">
+                <i class="fa fa-comment-o"></i> Lorem ipsum
+              </a>
+              <a href="#" class="list-group-item">
+                <i class="fa fa-search"></i> Lorem ipsum
+              </a>
+              <a href="#" class="list-group-item">
+                <i class="fa fa-user"></i> Lorem ipsum
+              </a>
+              <a href="#" class="list-group-item">
+                <i class="fa fa-folder-open-o"></i> Lorem ipsum <span class="badge">14</span>
+              </a>
+              <a href="#" class="list-group-item">
+                <i class="fa fa-bar-chart-o"></i> Lorem ipsum <span class="badge">14</span>
+              </a>
+              <a href="#" class="list-group-item">
+                <i class="fa fa-envelope"></i> Lorem ipsum
+              </a>
             </div>
           </div>
-          <div class={"navbar-collapse " + navClass}>
-          <ul class="nav navbar-nav">
-                  <li class="active">
-                    <a href="./">Left (Default Theme)</a>
-                  </li>
-                  <li class="">
-                    <a href="inverse.html">Right (Inverse Theme)</a>
-                  </li>
-                  <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Dropdown <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="#">Sub-page 1</a></li>
-                  <li><a href="#">Sub-page 2</a></li>
-                  <li class="divider"></li>
-                  <li class="dropdown-header">Dropdown Header</li>
-                  <li><a href="#">Sub-page 3</a></li>
-                  </ul></li>
-            </ul>
-            <ul class="nav nav-sidebar">
-              <li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li>
-              <li><a href="#">Reports</a></li>
-              <li><a href="#">Analytics</a></li>
-              <li><a href="#">Export</a></li>
-            </ul>
-            <ul class="nav nav-sidebar">
-              <li><a href="">Nav item</a></li>
-              <li><a href="">Nav item again</a></li>
-              <li><a href="">One more nav</a></li>
-              <li><a href="">Another nav item</a></li>
-              <li><a href="">More navigation</a></li>
-            </ul>
-            <ul class="nav nav-sidebar">
-              <li><a href="">Nav item again</a></li>
-              <li><a href="">One more nav</a></li>
-              <li><a href="">Another nav item</a></li>
-            </ul>
-          </div>
-        </nav>
+        </div>
       </div>
     );
   }
