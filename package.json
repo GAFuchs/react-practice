@@ -4,7 +4,7 @@
   "description": "Repository to practice react project with webpack.",
   "main": "webpack.config.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "webpack-dev-server --content-base src --inline --hot"
   },
   "repository": {
     "type": "git",
@@ -29,13 +29,11 @@
     "flux": "^2.1.1",
     "history": "^1.17.0",
     "react": "^0.14.6",
+    "react-addons-css-transition-group": "^15.4.1",
     "react-dom": "^0.14.6",
     "react-router": "^1.0.3",
     "webpack": "^1.12.9",
     "webpack-dev-server": "^1.14.1"
   },
-  "devDependencies": {},
-  "scripts": {
-    "dev": "webpack-dev-server --content-base src --inline --hot"
-  }
+  "devDependencies": {}
 }

@@ -20,6 +20,27 @@
     href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
     crossorigin="anonymous">
+
+  <style>
+    .drop-enter, .drop-leave {
+      transition: all 350ms ease;
+      -o-transition: all 350ms ease;
+      -moz-transition: all 350ms ease;
+      -webkit-transition: all 350ms ease;
+    }
+    .drop-enter, .drop-leave.drop-leave-active {
+      opacity: 0;
+      transform-origin: top;
+      overflow: hidden;
+      height: 0;
+    }
+    .drop-leave, .drop-enter.drop-enter-active {
+      opacity: 1;
+      transform-origin: top;
+      overflow: hidden;
+      height: 300px; /* looks good there, but I don't always know the height */
+    }
+  </style>
 </head>
 
 <body>
