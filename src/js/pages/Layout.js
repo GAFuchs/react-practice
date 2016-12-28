@@ -20,9 +20,7 @@ export default class Layout extends React.Component {
         <div class="container-fluid" style={containerStyle}>
           <div class="row">
             <div>
-
               {this.props.children}
-
             </div>
           </div>
           <Footer/>

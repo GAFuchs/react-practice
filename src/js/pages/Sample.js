@@ -1,5 +1,5 @@
 import React from "react";
-import { IndexLink, Link } from "react-router";
+import { Link } from "react-router";
 
 import SubMenu from "../components/SubMenu";
 
@@ -9,13 +9,16 @@ export default class Sample extends React.Component {
   }
 
   render() {
-    const homeClass = location.pathname === "/" ? "active" : "";
-    const sampleClass = location.pathname.match(/^\/sample/) ? "active" : "";
-    const todosClass = location.pathname.match(/^\/todos/) ? "active" : "";
+    const { location } = this.props;
 
     return (
       <div>
-        <SubMenu />
+        <SubMenu location={location} />
+        <div class="container-fluid row">
+          <div>
+            {this.props.children}
+          </div>
+        </div>
       </div>
     );
   }

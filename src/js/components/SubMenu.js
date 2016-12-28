@@ -52,7 +52,7 @@ export default class SubMenu extends React.Component {
     }
 
     const slideSubMenu = this.state.menu.map(
-      () => (<SlideSubMenu style={slideSubMenuStyle}/>)
+      () => (<SlideSubMenu location={this.props.location} style={slideSubMenuStyle}/>)
     );
 
     return (

@@ -7,15 +7,20 @@ export default class SlideSubMenu extends React.Component {
   }
 
   render() {
+
+    const { location } = this.props;
+    const presentationClass = location.pathname.match(/^\/presentation/) ? "active" : "";
+    const formDataClass = location.pathname.match(/^\/formData/) ? "active" : "";
+
     return (
       <div>
         <div class="list-group" style={this.props.style}>
-          <a href="#" class="list-group-item">
-            <i class="fa fa-comment-o"></i> Lorem ipsum
-          </a>
-          <a href="#" class="list-group-item">
-            <i class="fa fa-search"></i> Lorem ipsum
-          </a>
+          <Link to="sample/presentation" class={presentationClass, "list-group-item"}>
+            <i class="fa fa-newspaper-o"></i> Presentation
+          </Link>
+          <Link to="sample/formdata" class={formDataClass, "list-group-item"}>
+            <i class="fa fa-check-square-o"></i> Data Form
+          </Link>
         </div>
       </div>
     );

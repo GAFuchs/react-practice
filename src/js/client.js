@@ -9,7 +9,9 @@ import Todos from "./pages/Todos";
 import Favorites from "./pages/Favorites";
 import Settings from "./pages/Settings";
 
-// Inside
+// Inside Sample
+import Presentation from "./pages/samplePages/Presentation";
+import FormData from "./pages/samplePages/FormData";
 
 const app = document.getElementById('app');
 
@@ -17,7 +19,10 @@ ReactDOM.render(
   <Router history={hashHistory}>
     <Route path="/" component={Layout}>
       <IndexRoute component={Home}></IndexRoute>
-      <Route path="sample" component={Sample}></Route>
+      <Route path="sample" component={Sample}>
+        <Route path="presentation" component={Presentation}></Route>
+        <Route path="formdata" component={FormData}></Route>
+      </Route>
       <Route path="todos" component={Todos}></Route>
       <Route path="favorites" component={Favorites}></Route>
       <Route path="settings" component={Settings}></Route>
