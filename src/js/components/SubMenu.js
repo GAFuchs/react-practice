@@ -10,14 +10,33 @@ export default class SubMenu extends React.Component {
 
     this.state = {
       menu: [],
+      slideSubMenuHeight: "auto",
     };
 
     this.onClick = this.onClick.bind(this);
   }
 
+  componentDidMount() {
+    this.onClick();
+  }
+
   onClick() {
-    const slideSubMenu = this.state.menu.concat([1]);
-    this.setState({menu: slideSubMenu});
+    if (this.state.menu.length < 1) {
+      const slideSubMenu = this.state.menu.concat([{}]);
+      this.setState({
+        menu: slideSubMenu,
+        slideSubMenuHeight: "auto",
+      });
+
+      return;
+    }
+
+    let slideSubMenu = [];
+
+    this.setState({
+      menu: slideSubMenu,
+      slideSubMenuHeight: "0px",
+    });
   }
 
   render() {
@@ -27,8 +46,13 @@ export default class SubMenu extends React.Component {
       marginRight: "8px",
     };
 
+    const slideSubMenuStyle = {
+      overflow: "hidden",
+      height: this.state.slideSubMenuHeight,
+    }
+
     const slideSubMenu = this.state.menu.map(
-      (item) => (<SlideSubMenu key={item}/>)
+      () => (<SlideSubMenu style={slideSubMenuStyle}/>)
     );
 
     return (
