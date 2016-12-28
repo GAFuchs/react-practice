@@ -5,6 +5,7 @@ export default class Footer extends React.Component {
     const footerStyles = {
       marginTop: "30px",
       marginLeft: "10px",
+      textAlign: "center",
     };
 
     return (

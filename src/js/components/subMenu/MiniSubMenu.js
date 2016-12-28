@@ -22,7 +22,7 @@ export default class MiniSubMenu extends React.Component {
     return (
       <div class="list-group" style={componentMainStyle}>
         <span href="#" class="list-group-item active">
-          Submenu
+          Samples
           <span class="pull-right" style={slideSubMenuStyle} onClick={this.props.onClick.bind(this)}>
             <i class="fa fa-bars" aria-hidden="true"></i>
           </span>

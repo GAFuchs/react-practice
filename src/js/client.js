@@ -9,6 +9,8 @@ import Todos from "./pages/Todos";
 import Favorites from "./pages/Favorites";
 import Settings from "./pages/Settings";
 
+// Inside
+
 const app = document.getElementById('app');
 
 ReactDOM.render(
