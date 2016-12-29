@@ -1,0 +1,18 @@
+.drop-enter, .drop-leave {
+  transition: all 350ms ease;
+  -o-transition: all 350ms ease;
+  -moz-transition: all 350ms ease;
+  -webkit-transition: all 350ms ease;
+}
+.drop-enter, .drop-leave.drop-leave-active {
+  opacity: 0;
+  transform-origin: top;
+  overflow: hidden;
+  height: 0;
+}
+.drop-leave, .drop-enter.drop-enter-active {
+  opacity: 1;
+  transform-origin: top;
+  overflow: hidden;
+  height: 100px;
+}
