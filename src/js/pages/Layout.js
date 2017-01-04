@@ -10,7 +10,12 @@ export default class Layout extends React.Component {
 
     const containerStyle = {
       marginTop: "60px",
+      padding: "0px",
     };
+
+    const rowStyle = {
+      margin: "0px",
+    }
 
     return (
       <div>
@@ -18,10 +23,8 @@ export default class Layout extends React.Component {
         <Nav location={location} />
 
         <div class="container-fluid" style={containerStyle}>
-          <div class="row">
-            <div>
-              {this.props.children}
-            </div>
+          <div class="row" style={rowStyle}>
+            {this.props.children}
           </div>
           <Footer/>
         </div>

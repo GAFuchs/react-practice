@@ -42,8 +42,8 @@ export default class SubMenu extends React.Component {
   render() {
 
     const subMenuStyle = {
-      marginLeft: "8px",
-      marginRight: "8px",
+      paddingLeft: "5px",
+      paddingRight: "5px",
     };
 
     const slideSubMenuStyle = {
@@ -56,7 +56,7 @@ export default class SubMenu extends React.Component {
     );
 
     return (
-      <div class="col-sm-4 col-md-3 sidebar" style={subMenuStyle}>
+      <div class="col-md-3" style={subMenuStyle}>
         <MiniSubMenu onClick={this.onClick.bind(this)}/>
         <ReactCSSTransitionGroup
           transitionName="drop"
