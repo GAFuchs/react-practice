@@ -13,6 +13,7 @@ export default class Sample extends React.Component {
 
     const childrenStyle = {
       padding: "0px",
+      marginTop: "-9px",
     };
 
     return (
