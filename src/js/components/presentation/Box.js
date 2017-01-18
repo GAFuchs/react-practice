@@ -4,11 +4,7 @@ export default class Box extends React.Component {
   constructor(props) {
     super();
   }
-
-  buildImg() {
-
-  }
-
+  
   render() {
 
     const boxStyle = {
