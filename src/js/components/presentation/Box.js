@@ -34,6 +34,12 @@ export default class Box extends React.Component {
       borderBottom: "1px solid #C7C8C9",
     };
 
+    const titleStyle = {
+      fontFamily: "Arial",
+      fontSize: "20px",
+      textTransform: "uppercase",
+    };
+
     return (
       <div>
         <div class="col-xs-12 col-md-4" style={boxStyle}>
@@ -41,8 +47,8 @@ export default class Box extends React.Component {
             <img src={this.props.imgSrc} style={imgStyle}/>
           </div>
           <div class="col-xs-9 col-md-7" style={textDivStyle}>
-            <h4>About</h4>
-            <p>What is this page, our clients and specialties.</p>
+            <h4 style={titleStyle}>{this.props.title}</h4>
+            <p>{this.props.text}</p>
           </div>
         </div>
       </div>
